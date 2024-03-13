@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div class="mt-8">
+        <div class="title-login">SIGN IN</div>
+        <div class="container mx-auto px-8">
+            <form @submit.prevent="onSubmit">
+                <div class="row">
+                    <label class="flex flex-col" for="email">
+                        <span class="font-semibold">Email Address</span><span class="require">*</span><br>
+                        <input id="email" class="px-4 py-3 rounded-lg border-gray-100 mt-1" type="text" placeholder="example@gmail.com">
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="flex flex-col" for="password">
+                        <span class="font-semibold">Password</span><span class="require">*</span><br>
+                        <input id="password" class="px-4 py-3 rounded-lg border-gray-100 mt-1" type="password" placeholder="Password...">
+                    </label>
+                </div>
+                <div class="row">
+                    <button type="submit" class="py-3 text-center w-full">
+                        Sign In
+                    </button>
+                </div>
+            </form>
+            <div class="w-full-login text-center mt-6">
+                <span class="font-semibold">I'm a new member.</span>
+                <span class="ml-1">
+                    <router-link to="/register" class="text-content">Sign Up</router-link>
+                </span>
+            </div>
+        </div>
+    </div>
+  </body>
